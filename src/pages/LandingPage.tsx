@@ -233,9 +233,7 @@ export default function LandingPage({ onDownload }: LandingPageProps) {
       {/* ── FEATURES（为什么选 · 滚动展开卡组）── */}
       <section className="feature-stack-section" id="features" ref={featSectionRef}>
         <div className="feature-stack-sticky">
-          <h2 className="why-title feat-stack-title">
-            拼出你的<span className="brand-hand">回忆宇宙</span>
-          </h2>
+          <h2 className="why-title feat-stack-title">拼出你的回忆宇宙</h2>
           <div className="feature-card-stack">
             {FEATURES.map((f, i) => (
               <div
