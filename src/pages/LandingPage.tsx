@@ -25,7 +25,7 @@ const FEATURES = [
   { icon: 'burger', label: 'ZOOM IN', tone: 'blue',  tag: '远看 / 近看', title: '远看是一颗拼豆，近看全是回忆', desc: '把同地点的照片分类成合集，生成专属的拼豆照片墙。远看是一幅完整图案，放大后，每一颗拼豆都是你在那里留下的一个瞬间。' },
   { icon: 'cola',   label: 'MEMORY',  tone: 'mint',  tag: '生活碎片',     title: '用相册碎片，拼出生活故事', desc: 'Memory Beads 会根据地点整理自拍、旅行和日常照片。那些散落在相册里的生活片段，会被重新拼成一张有趣的回忆图，让你用另一种方式回顾过去。' },
   { icon: 'wing',   label: 'STYLE',   tone: 'peach', tag: '一键生成',     title: '随机生成专属拼豆图案', desc: '根据每个相册合集里的照片数量，自动生成合适的拼豆图案。照片越多，拼豆越丰富，每次生成都有不一样的惊喜。' },
-  { icon: 'fries',  label: 'EXPORT',  tone: 'pink',  tag: '可打印',       title: '可保存、可分享、可打印', desc: '生成后的作品可以保存成手机壁纸，也可以分享到社媒，或打印出来。不只是数字图片，也可以变成一份真实的纪念。' },
+  { icon: 'fries',  label: 'EXPORT',  tone: 'pink',  tag: '可打印',       title: '把回忆装进拍立得', desc: '点开每一张照片，都像翻开一张专属拍立得，照片下方记录着当时的时间与地点。' },
 ];
 
 // scroll-driven layout: 4 cards go from a stacked deck (center) → diagonal spread
