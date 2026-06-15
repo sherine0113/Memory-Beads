@@ -234,7 +234,7 @@ export default function LandingPage({ onDownload }: LandingPageProps) {
       <section className="feature-stack-section" id="features" ref={featSectionRef}>
         <div className="feature-stack-sticky">
           <h2 className="why-title feat-stack-title">
-            为什么选 <span className="brand-hand">Memory Beads</span>
+            拼出你的<span className="brand-hand">回忆宇宙</span>
           </h2>
           <div className="feature-card-stack">
             {FEATURES.map((f, i) => (
