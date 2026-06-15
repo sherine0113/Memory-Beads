@@ -216,8 +216,8 @@ export default function LandingPage({ onDownload }: LandingPageProps) {
           <div className="steps-row">
             {[
               { n: '1', title: '授权相册，让照片成为拼豆素材', desc: '打开 Memory Beads，授权访问你的相册。它会读取你允许使用的照片，把散落在手机里的瞬间，变成可以被重新拼起来的创作素材。', shot: asset('/mock-1.png') },
-              { n: '2', title: '按地点整理，生成你的回忆合集', desc: 'Memory Beads 会根据照片中的地点信息，自动整理出不同地点的回忆合集。一次旅行、一座城市、一段校园生活，都可以被归成一个专属记忆包。', shot: asset('/mock-2.png') },
-              { n: '3', title: '点进合集，生成专属拼豆记忆墙', desc: '选择一个回忆合集，Memory Beads 会根据照片数量生成对应规模的拼豆画。远看是一幅完整画面，放大后，每一颗拼豆都是一张被装饰过的照片卡片，记录着它的时间、地点和那段生活片段。', shot: asset('/mock-3.png') },
+              { n: '2', title: '按地点整理，生成你的回忆合集', desc: 'Memory Beads 会根据照片中的地点信息，自动整理出不同地点的回忆合集。一次旅行、一座城市、一段校园生活，都可以被归成一个专属记忆包。', shot: asset('/mock-3.png') },
+              { n: '3', title: '点进合集，生成专属拼豆记忆墙', desc: '选择一个回忆合集，Memory Beads 会根据照片数量生成对应规模的拼豆画。远看是一幅完整画面，放大后，每一颗拼豆都是一张被装饰过的照片卡片，记录着它的时间、地点和那段生活片段。', shot: asset('/mock-2.png') },
             ].map(step => (
               <div key={step.n} className="step-item">
                 <div className="step-num-circle">{step.n}</div>
