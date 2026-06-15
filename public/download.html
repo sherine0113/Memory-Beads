@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Download · Android</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #FAFAF7; font-family: "Inter", "PingFang SC", "Noto Sans SC", system-ui, sans-serif; }
+
+  .canvas {
+    position: relative;
+    width: 1248px;
+    height: 768px;
+    margin: 0 auto;
+    background: #FAFAF7;
+    overflow: hidden;
+  }
+
+  /* faint colored dot decoration — very subtle, behind content */
+  .bg-dots {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+    background-image:
+      radial-gradient(circle at 8% 18%, #F0831F 0 6px, transparent 7px),
+      radial-gradient(circle at 92% 26%, #4B5CFF 0 5px, transparent 6px),
+      radial-gradient(circle at 14% 82%, #2BCFA2 0 5px, transparent 6px),
+      radial-gradient(circle at 88% 78%, #FF6F9B 0 6px, transparent 7px),
+      radial-gradient(circle at 50% 92%, #F8C90B 0 4px, transparent 5px);
+  }
+
+  /* ── Top platform card ── */
+  .platform-card {
+    position: absolute;
+    left: 50px; top: 72px;
+    width: 1120px; height: 128px;
+    border-radius: 64px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+  }
+  .platform-icon {
+    position: absolute;
+    left: 102px; top: 116px;
+    width: 36px; height: 36px;
+    font-size: 36px; line-height: 36px;
+  }
+  .platform-title {
+    position: absolute;
+    left: 164px; top: 122px;
+    font-size: 28px; font-weight: 700; color: #222222; line-height: 1;
+  }
+  .status-badge {
+    position: absolute;
+    left: 974px; top: 112px;
+    width: 146px; height: 48px;
+    border-radius: 24px;
+    background: #E4F5E7;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 700; color: #6B776D;
+  }
+
+  /* ── QR card (QR lives INSIDE here) ── */
+  .qr-card {
+    position: absolute;
+    left: 456px; top: 250px;
+    width: 336px; height: 336px;
+    border-radius: 36px;
+    background: #FFFFFF;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+    padding: 24px;                       /* fixed 24px inset on all sides */
+    display: flex; align-items: center; justify-content: center;
+  }
+  .qr-code {
+    width: 288px; height: 288px;
+    display: block;
+    image-rendering: pixelated;
+  }
+
+  /* ── Caption ── */
+  .qr-caption {
+    position: absolute;
+    left: 0; top: 620px;
+    width: 1248px;
+    text-align: center;
+    font-size: 28px; font-weight: 400; color: #6D746B;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="bg-dots"></div>
+
+    <!-- Top platform card -->
+    <div class="platform-card"></div>
+    <div class="platform-icon">🤖</div>
+    <div class="platform-title">Android 安卓</div>
+    <div class="status-badge">现已可用</div>
+
+    <!-- QR card containing the QR code -->
+    <div class="qr-card">
+      <img class="qr-code" src="/qr.png" alt="Android 下载二维码" />
+    </div>
+
+    <!-- Caption -->
+    <div class="qr-caption">扫码下载 Android 版</div>
+  </div>
+</body>
+</html>

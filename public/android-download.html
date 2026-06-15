@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Android 安卓 · 下载</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #FAFAF7; font-family: "Inter", "PingFang SC", "Noto Sans SC", system-ui, sans-serif; }
+
+  .page {
+    position: relative;
+    width: 1248px;
+    min-height: 768px;
+    margin: 0 auto;
+    background: #FAFAF7;
+    padding: 56px 72px 64px;
+    overflow: hidden;
+  }
+
+  /* faint colored dot decoration (opacity < 0.25, never obscures content) */
+  .bg-dots {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.2;
+    background-image:
+      radial-gradient(circle at 10% 22%, #F0831F 0 5px, transparent 6px),
+      radial-gradient(circle at 90% 18%, #4B5CFF 0 4px, transparent 5px),
+      radial-gradient(circle at 16% 80%, #2BCFA2 0 4px, transparent 5px),
+      radial-gradient(circle at 86% 82%, #FF6F9B 0 5px, transparent 6px),
+      radial-gradient(circle at 50% 12%, #F8C90B 0 4px, transparent 5px);
+  }
+
+  .header { position: relative; z-index: 1; text-align: center; }
+  .title {
+    font-size: 88px; font-weight: 800; line-height: 1.1; color: #20232A;
+    margin-bottom: 32px;
+  }
+  .subtitle {
+    font-size: 30px; font-weight: 400; color: #2B2F36; margin-bottom: 24px;
+  }
+  .meta {
+    font-size: 24px; line-height: 1.5; color: #6B7280;
+  }
+  .meta .link { color: #1A73E8; font-weight: 500; cursor: pointer; }
+  .meta .sep { color: #C7CCD4; margin: 0 12px; }
+
+  .content {
+    position: relative; z-index: 1;
+    margin-top: 70px;          /* lands the card around content_top ≈ 360px */
+    display: flex; justify-content: center; align-items: center;
+  }
+
+  /* ── Android download card ── */
+  .download-card {
+    width: 420px; min-height: 420px;
+    background: #FFFFFF;
+    border-radius: 36px;
+    box-shadow: 0 24px 80px rgba(28, 45, 80, 0.08);
+    border: 1px solid rgba(230, 234, 240, 0.8);
+    padding: 42px 42px 32px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+
+  /* ── QR card container (QR lives strictly inside this) ── */
+  .qr-card {
+    width: 300px; height: 300px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+    padding: 22px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .qr-code {
+    width: 256px; height: 256px; display: block;
+    background: #FFFFFF; image-rendering: pixelated;
+  }
+
+  .card-title {
+    font-size: 26px; font-weight: 700; color: #20232A; margin-top: 26px;
+  }
+  .card-desc {
+    font-size: 22px; font-weight: 400; color: #6D746B; margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="bg-dots"></div>
+
+    <div class="header">
+      <h1 class="title">Android 安卓</h1>
+      <div class="subtitle">扫码下载 Android 版</div>
+      <div class="meta">
+        开发者：北京飞书科技有限公司
+        <span class="sep">|</span>
+        <span class="link">应用权限</span>&nbsp;&nbsp;<span class="link">隐私政策</span>
+        <span class="sep">|</span>
+        现已可用
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="download-card">
+        <div class="qr-card">
+          <img class="qr-code" src="/qr.png" alt="Android 下载二维码" />
+        </div>
+        <div class="card-title">Android 安卓</div>
+        <div class="card-desc">扫码下载 Android 版</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Feature Cards</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #FAFAF7; font-family: "Inter", "PingFang SC", "Noto Sans SC", system-ui, sans-serif; }
+
+  .canvas {
+    position: relative;
+    width: 1886px; height: 736px;
+    margin: 0 auto;
+    background: #FAFAF7;
+  }
+  .cards-container {
+    position: absolute;
+    left: 60px; top: 60px;
+    width: 1800px; height: 620px;
+  }
+
+  /* every piece of content is a child of, and contained by, the card */
+  .feature-card {
+    position: absolute;
+    width: 480px; height: 540px;
+    padding: 56px 48px;
+    border-radius: 48px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(40, 50, 80, 0.12);
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .card-dot {
+    position: absolute; top: 48px; left: 48px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: #FF5C9A; box-shadow: 0 4px 12px rgba(255, 92, 154, 0.35);
+  }
+  .card-title {
+    max-width: 384px;
+    margin: 28px 0 28px;
+    font-size: 34px; font-weight: 800; line-height: 1.22; letter-spacing: -0.5px;
+    word-break: break-word; overflow-wrap: break-word;
+    color: inherit;
+  }
+  .card-desc {
+    max-width: 384px;
+    font-size: 22px; font-weight: 400; line-height: 1.75;
+    opacity: 0.68; color: inherit;
+    word-break: break-word; overflow-wrap: break-word;
+  }
+  .card-pattern {
+    position: absolute; right: 48px; bottom: 48px;
+    width: 230px; height: 180px;
+    opacity: 0.12; color: inherit;
+    background-image: radial-gradient(currentColor 1.6px, transparent 1.6px);
+    background-size: 18px 18px;
+    pointer-events: none;
+  }
+
+  /* per-card placement + colours */
+  .c1 { left: 100px;  top: 10px;  transform: rotate(-7deg); z-index: 4;
+        background: linear-gradient(135deg, #ECECFF 0%, #DCD9FF 100%); color: #1D2A75; }
+  .c2 { left: 520px;  top: 100px; transform: rotate(-2deg); z-index: 3;
+        background: linear-gradient(135deg, #D6FFF7 0%, #C7F5EE 100%); color: #153F3B; }
+  .c3 { left: 930px;  top: 210px; transform: rotate(4deg);  z-index: 2;
+        background: linear-gradient(135deg, #FFE7C7 0%, #FFD8A8 100%); color: #6B2A14; }
+  .c4 { left: 1320px; top: 250px; transform: rotate(7deg);  z-index: 1;
+        background: linear-gradient(135deg, #FFD7E7 0%, #FFC0D8 100%); color: #741C38; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="cards-container">
+
+      <div class="feature-card c1">
+        <div class="card-dot"></div>
+        <h3 class="card-title">远看是一颗拼豆，近看全是回忆</h3>
+        <p class="card-desc">把同地点的照片分类成合集，生成专属的拼豆照片墙。远看是一幅完整图案，放大后，每一颗拼豆都是你在那里留下的一个瞬间。</p>
+        <div class="card-pattern"></div>
+      </div>
+
+      <div class="feature-card c2">
+        <div class="card-dot"></div>
+        <h3 class="card-title">把相册碎片，拼出生活故事</h3>
+        <p class="card-desc">Memory Beads 会根据地点整理自旅行和日常照片。那些散落在相册里的生活片段，会被重新拼成一张有趣的回忆图。</p>
+        <div class="card-pattern"></div>
+      </div>
+
+      <div class="feature-card c3">
+        <div class="card-dot"></div>
+        <h3 class="card-title">随机生成专属拼豆图案</h3>
+        <p class="card-desc">根据每个相册合集里的照片数量，自动生成合适的拼豆图案。照片越多，拼豆越丰富，每次生成都有不一样的惊喜。</p>
+        <div class="card-pattern"></div>
+      </div>
+
+      <div class="feature-card c4">
+        <div class="card-dot"></div>
+        <h3 class="card-title">可保存、可分享、可打印</h3>
+        <p class="card-desc">生成后的作品可以保存成手机壁纸，也可以分享到社媒，或打印出来。不只是数字图片，也可以变成一份真实的纪念。</p>
+        <div class="card-pattern"></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

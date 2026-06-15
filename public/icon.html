@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pixel Icon</title>
+<style>
+  :root {
+    --block-size: 48px;
+    --block-radius: 8px;
+    --gap: 5px;
+    --icon-left: 130px;
+    --icon-top: 170px;
+    --yellow: #F8C90B;
+    --orange: #F0831F;
+    --light-yellow: #FBE9A5;
+    --red: #EF4B3E;
+    --dark-red: #C83A2E;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #F7F8FA; }
+  .canvas {
+    position: relative;
+    width: 680px;
+    height: 728px;
+    margin: 0 auto;
+    background: #F7F8FA;
+  }
+  .icon {
+    position: absolute;
+    left: var(--icon-left);
+    top: var(--icon-top);
+    display: grid;
+    grid-template-columns: repeat(8, var(--block-size));
+    grid-template-rows: repeat(8, var(--block-size));
+    gap: var(--gap);
+  }
+  .b {
+    width: var(--block-size);
+    height: var(--block-size);
+    border-radius: var(--block-radius);
+  }
+  .y  { background: var(--yellow); }
+  .o  { background: var(--orange); }
+  .ly { background: var(--light-yellow); }
+  .r  { background: var(--red); }
+  .dr { background: var(--dark-red); }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="icon">
+      <!-- row 1 -->
+      <div class="b y"  style="grid-column:2;grid-row:1"></div>
+      <div class="b o"  style="grid-column:4;grid-row:1"></div>
+      <div class="b y"  style="grid-column:6;grid-row:1"></div>
+      <!-- row 2 -->
+      <div class="b ly" style="grid-column:1;grid-row:2"></div>
+      <div class="b y"  style="grid-column:2;grid-row:2"></div>
+      <div class="b y"  style="grid-column:4;grid-row:2"></div>
+      <div class="b o"  style="grid-column:5;grid-row:2"></div>
+      <div class="b y"  style="grid-column:6;grid-row:2"></div>
+      <div class="b ly" style="grid-column:7;grid-row:2"></div>
+      <!-- row 3 -->
+      <div class="b y"  style="grid-column:1;grid-row:3"></div>
+      <div class="b o"  style="grid-column:2;grid-row:3"></div>
+      <div class="b y"  style="grid-column:3;grid-row:3"></div>
+      <div class="b y"  style="grid-column:4;grid-row:3"></div>
+      <div class="b y"  style="grid-column:5;grid-row:3"></div>
+      <div class="b o"  style="grid-column:6;grid-row:3"></div>
+      <div class="b y"  style="grid-column:7;grid-row:3"></div>
+      <div class="b y"  style="grid-column:8;grid-row:3"></div>
+      <!-- row 4 -->
+      <div class="b r" style="grid-column:1;grid-row:4"></div>
+      <div class="b r" style="grid-column:2;grid-row:4"></div>
+      <div class="b r" style="grid-column:3;grid-row:4"></div>
+      <div class="b r" style="grid-column:4;grid-row:4"></div>
+      <div class="b r" style="grid-column:5;grid-row:4"></div>
+      <div class="b r" style="grid-column:6;grid-row:4"></div>
+      <div class="b r" style="grid-column:7;grid-row:4"></div>
+      <div class="b r" style="grid-column:8;grid-row:4"></div>
+      <!-- row 5 -->
+      <div class="b r" style="grid-column:1;grid-row:5"></div>
+      <div class="b r" style="grid-column:2;grid-row:5"></div>
+      <div class="b r" style="grid-column:3;grid-row:5"></div>
+      <div class="b r" style="grid-column:4;grid-row:5"></div>
+      <div class="b r" style="grid-column:5;grid-row:5"></div>
+      <div class="b r" style="grid-column:6;grid-row:5"></div>
+      <div class="b r" style="grid-column:7;grid-row:5"></div>
+      <div class="b r" style="grid-column:8;grid-row:5"></div>
+      <!-- row 6 -->
+      <div class="b r" style="grid-column:1;grid-row:6"></div>
+      <div class="b r" style="grid-column:2;grid-row:6"></div>
+      <div class="b r" style="grid-column:3;grid-row:6"></div>
+      <div class="b y" style="grid-column:4;grid-row:6"></div>
+      <div class="b y" style="grid-column:5;grid-row:6"></div>
+      <div class="b r" style="grid-column:6;grid-row:6"></div>
+      <div class="b r" style="grid-column:7;grid-row:6"></div>
+      <div class="b r" style="grid-column:8;grid-row:6"></div>
+      <!-- row 7 -->
+      <div class="b r" style="grid-column:1;grid-row:7"></div>
+      <div class="b r" style="grid-column:2;grid-row:7"></div>
+      <div class="b r" style="grid-column:3;grid-row:7"></div>
+      <div class="b r" style="grid-column:4;grid-row:7"></div>
+      <div class="b r" style="grid-column:5;grid-row:7"></div>
+      <div class="b r" style="grid-column:6;grid-row:7"></div>
+      <div class="b r" style="grid-column:7;grid-row:7"></div>
+      <div class="b r" style="grid-column:8;grid-row:7"></div>
+      <!-- row 8 -->
+      <div class="b dr" style="grid-column:2;grid-row:8"></div>
+      <div class="b dr" style="grid-column:3;grid-row:8"></div>
+      <div class="b dr" style="grid-column:4;grid-row:8"></div>
+      <div class="b dr" style="grid-column:5;grid-row:8"></div>
+      <div class="b dr" style="grid-column:6;grid-row:8"></div>
+      <div class="b dr" style="grid-column:7;grid-row:8"></div>
+    </div>
+  </div>
+</body>
+</html>

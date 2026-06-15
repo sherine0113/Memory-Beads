@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>iPhone Mockup Shell</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .canvas {
+    width: 420px; height: 820px;
+    margin: 0 auto;
+    background: #F3F4F6;
+    display: grid; place-items: center;
+  }
+
+  .phone-mockup { position: relative; width: 330px; height: 700px;
+                  display: grid; place-items: center; }
+
+  /* outer black shell */
+  .phone-shell {
+    position: relative;
+    width: 320px; height: 690px;
+    padding: 8px;
+    border-radius: 56px;
+    background: #050505;
+    box-sizing: border-box;
+    box-shadow:
+      0 24px 60px rgba(0, 0, 0, 0.28),
+      0 8px 20px rgba(0, 0, 0, 0.18),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+  /* subtle metal edge highlight */
+  .phone-shell::before {
+    content: ""; position: absolute; inset: 2px;
+    border-radius: 50px; pointer-events: none;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+  }
+
+  /* white screen */
+  .phone-screen {
+    width: 100%; height: 100%;
+    border-radius: 48px;
+    background: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+  }
+  .app-placeholder { width: 100%; height: 100%; background: #FFFFFF; }
+
+  /* dynamic island */
+  .dynamic-island {
+    position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
+    width: 98px; height: 30px; border-radius: 999px;
+    background: #000000; z-index: 10;
+  }
+  .dynamic-island::after {              /* camera dot, right side */
+    content: ""; position: absolute; top: 50%; right: 18px; transform: translateY(-50%);
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #1B1B1B; border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* home indicator */
+  .home-indicator {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    width: 118px; height: 4px; border-radius: 999px;
+    background: #000000; opacity: 0.9; z-index: 10;
+  }
+
+  /* side buttons */
+  .btn { position: absolute; background: #151515; border-radius: 4px; }
+  .btn-silent  { left: -4px; top: 104px; width: 4px; height: 34px; border-radius: 4px 0 0 4px; }
+  .btn-vol-up  { left: -4px; top: 158px; width: 4px; height: 58px; border-radius: 4px 0 0 4px; }
+  .btn-vol-dn  { left: -4px; top: 228px; width: 4px; height: 58px; border-radius: 4px 0 0 4px; }
+  .btn-power   { right: -4px; top: 190px; width: 4px; height: 86px; border-radius: 0 4px 4px 0; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="phone-mockup">
+      <div class="phone-shell">
+        <span class="btn btn-silent"></span>
+        <span class="btn btn-vol-up"></span>
+        <span class="btn btn-vol-dn"></span>
+        <span class="btn btn-power"></span>
+
+        <div class="phone-screen">
+          <div class="app-placeholder"><!-- App screenshot goes here --></div>
+        </div>
+
+        <div class="dynamic-island"></div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
