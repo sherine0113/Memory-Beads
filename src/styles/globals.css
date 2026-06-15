@@ -1431,7 +1431,8 @@ body {
     width: min(100%, 360px); height: auto;
     transform: none !important;
   }
-  .feature-card-inner { animation: none; min-height: 300px; }
+  /* hug content instead of a fixed 300px box, so the card bottom sits close to the text */
+  .feature-card-inner { animation: none; }
   .feature-card:hover .feature-card-inner { transform: translateY(-4px) !important; }
 }
 @media (prefers-reduced-motion: reduce) {
